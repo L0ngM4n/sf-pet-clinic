@@ -45,7 +45,7 @@ class OwnerSDJpaServiceTest {
 
     @Test
     void findByLastName() {
-        when(ownerRepository.findByLastName(any())).thenReturn(returnOwner);
+        when(ownerRepository.findByLastName(eq(LAST_NAME))).thenReturn(returnOwner);
 
         Owner smith = service.findByLastName(LAST_NAME);
 
